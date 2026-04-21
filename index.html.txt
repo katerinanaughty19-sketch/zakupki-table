@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение 44-ФЗ и 223-ФЗ — корпоративная таблица</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f7fc;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .table-container {
+            max-width: 1400px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+            overflow-x: auto;
+            transition: all 0.2s ease;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding: 24px 28px 8px 28px;
+            color: #1a2c3e;
+            letter-spacing: -0.3px;
+            border-left: 6px solid #38066C;
+            margin: 0 0 8px 0;
+            background: white;
+        }
+
+        .subhead {
+            padding: 0 28px 20px 28px;
+            color: #4a5b6e;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+            background: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14.5px;
+            line-height: 1.45;
+            background: white;
+        }
+
+        th {
+            background: #38066C;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 16px 18px;
+            border: none;
+            text-align: left;
+        }
+
+        th:first-child {
+            border-top-left-radius: 16px;
+        }
+        th:last-child {
+            border-top-right-radius: 16px;
+        }
+
+        td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e9edf2;
+            background-color: white;
+            vertical-align: top;
+            color: #1f2a3e;
+        }
+
+        .criteria-cell {
+            background-color: #faf9ff;
+            font-weight: 700;
+            color: #1a1f2c;
+            border-right: 1px solid #e9edf2;
+            width: 18%;
+            font-size: 14.5px;
+        }
+
+        tr:hover td {
+            background-color: #fefaf5;
+            transition: 0.1s;
+        }
+
+        tr:hover .criteria-cell {
+            background-color: #f5f2ff;
+        }
+
+        ul, .sub-list {
+            margin: 6px 0 0 18px;
+            padding-left: 0;
+        }
+        li {
+            margin: 6px 0;
+            line-height: 1.4;
+        }
+        .note {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #4a5568;
+            border-left: 3px solid #38066C;
+            padding-left: 12px;
+            background: #fbfaff;
+            border-radius: 0 8px 8px 0;
+        }
+        strong {
+            color: #38066C;
+            font-weight: 600;
+        }
+        hr {
+            margin: 12px 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #ddd, transparent);
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 20px 12px;
+            }
+            th, td {
+                padding: 12px 12px;
+            }
+            h2 {
+                font-size: 1.4rem;
+                padding: 20px 20px 4px 20px;
+            }
+            .subhead {
+                padding: 0 20px 16px 20px;
+            }
+        }
+
+        .footer-note {
+            background: #fafaff;
+            padding: 14px 28px;
+            font-size: 12px;
+            color: #4b5563;
+            border-top: 1px solid #e2e8f0;
+            border-radius: 0 0 24px 24px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #38066C10;
+            color: #38066C;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<div class="table-container">
+    <h2>📊 Основные различия между 44-ФЗ и 223-ФЗ</h2>
+    <div class="subhead">
+        ⚖️ Сравнительный анализ нормативно-правовой базы, закупочных процедур и требований к участникам
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Критерий</th>
+                <th>44-ФЗ</th>
+                <th>223-ФЗ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="criteria-cell">НПА</td>
+                <td>44-ФЗ от 05.04.2013</td>
+                <td>223-ФЗ от 18.07.2011, <strong>положение о закупке</strong> заказчика</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Заказчики</td>
+                <td>Государственные и муниципальные органы, бюджетники</td>
+                <td>Госкорпорации, крупный бизнес с госучастием, бюджетники с положением о закупке</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Финансирование</td>
+                <td>Бюджет — федеральный, региональный, местный</td>
+                <td>Собственные средства заказчика</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Участники</td>
+                <td>
+                    Российские и иностранные юрлица, ИП, самозанятые и физлица, которые соответствуют требованиям 44-ФЗ.
+                    <div class="note">❌ Не могут участвовать: офшорные компании, должники по налогам, банкроты, иноагенты и др. (ст. 31 44-ФЗ)</div>
+                </td>
+                <td>
+                    Российские и иностранные юрлица, ИП, самозанятые и физлица, соответствующие требованиям заказчика.
+                    <div class="note">❌ Не могут участвовать: иноагенты</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">ЭТП</td>
+                <td>8 федеральных площадок</td>
+                <td>8 федеральных площадок + коммерческие ЭТП</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Способы закупок</td>
+                <td>
+                    • Электронные аукционы, конкурсы, котировки<br>
+                    • Закупки у единственного поставщика (в т.ч. в электронном виде)
+                </td>
+                <td>
+                    • Аукционы, конкурсы, запросы котировок и предложений, закупки у ЕП<br>
+                    • Электронная и бумажная форма<br>
+                    • <strong>Закупки по принципу электронного магазина</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Сроки закупок</td>
+                <td>Строго регламентированы</td>
+                <td>Регламентированы минимальные сроки, заказчик может установить больше</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Обеспечение заявок</td>
+                <td>Требуется во всех закупках с НМЦК свыше 1 млн рублей</td>
+                <td>Может устанавливаться по инициативе заказчика в закупках с НМЦ свыше 5 млн рублей</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Обеспечение контракта</td>
+                <td>Требуется во всех контрактах по результатам электронных аукционов и конкурсов</td>
+                <td>Устанавливается на усмотрение заказчика</td>
+            </tr>
+            <tr>
+                <td class="criteria-cell">Ответственность и контроль</td>
+                <td>Контроль: вышестоящие органы, Казначейство, ФАС. Поставщик несёт ответственность по договору</td>
+                <td>Контроль: вышестоящие органы, Казначейство, ФАС. Поставщик несёт ответственность по договору</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="footer-note">
+        <span class="badge">🎯 Корпоративный стандарт</span>
+        <span class="badge">⚡ 44-ФЗ — жесткая регламентация</span>
+        <span class="badge">🔄 223-ФЗ — гибкость и положение о закупке</span>
+    </div>
+</div>
+</body>
+</html>
